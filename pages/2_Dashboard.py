@@ -32,8 +32,11 @@ with col2:
 with col3:
     st.metric("Pending",pending_goals)
 st.subheader("Overall Progress")
-st.progress(completed_goals / total_goals)
-st.write(f"{completed_goals} out of {total_goals} goals completed!")
+if total_goals>0:
+  st.progress(completed_goals / total_goals)
+  st.write(f"{completed_goals} out of {total_goals} goals completed!")
+else:
+  st.write("No goals yet- add some to see your progress!")
 if overdue_count > 0:
     st.error(f"🔴 {overdue_count} goal(s) overdue!")
 if due_today_count > 0:
