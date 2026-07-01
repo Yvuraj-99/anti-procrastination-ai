@@ -82,7 +82,7 @@ if user_input:                                                # agar user ne kuc
         st.write(user_input)                                  # user ka input dikhata hai
     with st.spinner("Thinking...."):                          # "Thinking..." spinner dikhata hai jab tak AI soch raha hai
      response = client.chat.completions.create(               # AI ko request bhejta hai
-        model="llama-3.3-70b-versatile",                      # kaunsa model
+        model="openai/gpt-oss-120b",                      # kaunsa model
         messages=[{"role": "system", "content": system_prompt}] + st.session_state.messages   # system prompt + poori chat history bhejta hai
     )
     ai_reply = response.choices[0].message.content            # AI ke response se actual reply text nikalta hai

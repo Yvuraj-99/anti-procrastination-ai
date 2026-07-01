@@ -12,7 +12,7 @@ random_topics=random.choice(topics)       # list mein se ek RANDOM topic choose 
 
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))   # Groq client banata hai, API key .env se leke
 response = client.chat.completions.create(          # AI ko request bhejta hai quote ke liye
-    model="llama-3.3-70b-versatile",                # kaunsa AI model use karna hai (llama)
+    model="openai/gpt-oss-120b",               # kaunsa AI model use karna hai (llama)
     messages=[
         {"role": "user", "content":f"Give me one short, powerful motivational quote about {random_topics}. Just the quote, nothing else."}   # AI ko instruction - random topic pe quote do (f-string se topic inject kiya)
     ]
