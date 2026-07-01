@@ -70,7 +70,7 @@ streamlit run Home.py
 **Yuvraj Baliyan**
 First-year B.Tech CSE (AI) student · aspiring AI Engineer
 
-- GitHub: [@Yuvraj-99](https://github.com/Yuvraj-99)
+- GitHub: [@Yvuraj-99](https://github.com/Yvuraj-99)
 
 ---
 
