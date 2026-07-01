@@ -60,7 +60,7 @@ if total_goals > 0:                       # agar kam se kam 1 goal hai (warna sa
         category_counts=goals_df["Category"].value_counts()   # har category ke goals count karta hai
         fig2,ax2=plt.subplots(figsize=(8,6))   # naya figure/axis
         fig2.patch.set_facecolor('black') # axis ka background black set karta hai
-        ax2/set_facecolor('black') # axis ka background black set karta hai
+        ax2.set_facecolor('black') # axis ka background black set karta hai
         ax2.bar(category_counts.index,category_counts.values,color="Red")   # bar chart (red) - category wise
         ax2.set_xlabel("Category", fontsize=14)   # x-axis ka label
         ax2.set_ylabel("Number of Goals", fontsize=14)   # y-axis ka label
