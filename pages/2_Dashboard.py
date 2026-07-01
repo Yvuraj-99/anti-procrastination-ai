@@ -52,11 +52,15 @@ if total_goals > 0:                       # agar kam se kam 1 goal hai (warna sa
     col1,col2,col3=st.columns(3)          # charts ke liye 3 columns
     with col1:                            # pehle column - Pie chart:
         fig,ax=plt.subplots(figsize=(8,6))   # figure aur axis banata hai (8x6 size)
+        fig.patch.set_facecolor('black') # figure ka background black set karta hai
+        ax.set_facecolor('black') # axis ka background black set karta hai
         ax.pie([completed_goals,pending_goals],labels=["Completed","Pending"],autopct="%1.1f%%")   # pie chart - completed vs pending, % ke saath
         st.pyplot(fig)                    # chart ko screen pe dikhata hai
     with col2:                            # doosre column - Category bar chart:
         category_counts=goals_df["Category"].value_counts()   # har category ke goals count karta hai
         fig2,ax2=plt.subplots(figsize=(8,6))   # naya figure/axis
+        fig2.patch.set_facecolor('black') # axis ka background black set karta hai
+        ax2/set_facecolor('black') # axis ka background black set karta hai
         ax2.bar(category_counts.index,category_counts.values,color="Red")   # bar chart (red) - category wise
         ax2.set_xlabel("Category", fontsize=14)   # x-axis ka label
         ax2.set_ylabel("Number of Goals", fontsize=14)   # y-axis ka label
@@ -65,6 +69,8 @@ if total_goals > 0:                       # agar kam se kam 1 goal hai (warna sa
     with col3:                            # teesre column - Priority bar chart:
         priority_count=goals_df["Priority"].value_counts()   # har priority ke goals count
         fig3,ax3=plt.subplots(figsize=(8,6))   # naya figure/axis
+        fig3.patch.set_facecolor('black') # axis ka background black set karta hai
+        ax3.set_facecolor('black') # axis ka background black set karta hai
         ax3.bar(priority_count.index,priority_count.values,color="green")   # bar chart (green) - priority wise
         ax3.set_xlabel("Priority",fontsize=14)    # x-axis label
         ax3.set_ylabel("Number of goals",fontsize=14)   # y-axis label

@@ -1,4 +1,4 @@
-import streamlit as st                    # Streamlit library import - web app banane ke liye
+import streamlit as st                    # Streamlit library import - web app ban ane ke liye
 import pandas as pd                       # Pandas import - CSV/data handle karne ke liye
 from groq import Groq                     # Groq import - AI (LLM) ko call karne ke liye
 from dotenv import load_dotenv            # dotenv import - .env file se secrets padhne ke liye
@@ -59,3 +59,13 @@ st.write("1️⃣ **Set a goal** — Add your goals with deadlines and prioritie
 st.write("2️⃣ **Track progress** — Mark goals as complete when done")                      # Step 2 explanation
 st.write("3️⃣ **Get AI support** — Receive personalized motivation based on your progress")  # Step 3 explanation
 st.write("4️⃣ **Visualize growth** — See your achievements on the dashboard")              # Step 4 explanation
+
+
+
+
+
+
+
+
+
+
